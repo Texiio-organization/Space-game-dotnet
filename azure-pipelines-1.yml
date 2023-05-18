@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  name: 'DotNet'
 
 variables:
   solution: '**/*.sln'
