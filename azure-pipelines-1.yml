@@ -50,22 +50,13 @@ steps:
     downloadType: 'single'
     artifactName: 'drop'
     downloadPath: '$(System.ArtifactsDirectory)'
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*testTailspin.SpaceGame.Web*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    runTestsInIsolation: true
-    codeCoverageEnabled: true
+
 - task: VSTest@2
   displayName: "Unit Test"
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*testTailspin.SpaceGame.Web*.dll
+      **\*Tailspin.SpaceGame.Web*.dll
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
