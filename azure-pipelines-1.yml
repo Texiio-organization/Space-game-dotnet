@@ -56,7 +56,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*Tailspin.SpaceGame.Web*.dll
+      **\*testTailspin.SpaceGame.Web*.dll
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
