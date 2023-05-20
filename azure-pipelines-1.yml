@@ -61,6 +61,7 @@ steps:
     runTestsInIsolation: true
     codeCoverageEnabled: true
 - task: VSTest@2
+  displayName: "DotNet"
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
