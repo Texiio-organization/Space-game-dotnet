@@ -60,7 +60,12 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    runOnlyImpactedTests: true
+    runAllTestsAfterXBuilds: '1'
+    uiTests: true
     runTestsInIsolation: true
     codeCoverageEnabled: true
+    testRunTitle: 'vs test'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    rerunFailedTests: true
