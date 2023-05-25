@@ -1,4 +1,19 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+// Import necessary modules and dependencies
+const assert = require('assert');
+const { simulateSpaceshipMovement } = require('./tailspin-game');
 
-// Write your JavaScript code.
+// Test case: Verify spaceship movement
+describe('Spaceship Movement', function () {
+  it('should update the spaceship position correctly', function () {
+    // Set up the initial spaceship position
+    const spaceship = { x: 0, y: 0 };
+
+    // Simulate spaceship movement
+    simulateSpaceshipMovement(spaceship, 'right', 10);
+
+    // Verify the final spaceship position
+    assert.strictEqual(spaceship.x, 10);
+    assert.strictEqual(spaceship.y, 0);
+  });
+});
+
